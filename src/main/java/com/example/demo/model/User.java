@@ -20,14 +20,7 @@ public class User {
 	private long id;
 	private String email;
 	private String password;
-    /**
-     * 
-     */
-    @OneToMany(
-            cascade = CascadeType.ALL,
-            orphanRemoval = true
-        )
-        private List<Exercise> exerciselist;
+
 	
 
 
@@ -69,11 +62,4 @@ public class User {
 		this.password = password;
 	}
 
-	public List<Exercise> geteercises() {
-		return exerciselist;
-	}
-
-	public void setExercises(List<Exercise> comments) {
-		this.exerciselist = comments;
-	}
 }

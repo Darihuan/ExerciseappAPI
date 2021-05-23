@@ -18,7 +18,7 @@ public class Userconfiguration {
 
 
 		@Bean
-		CommandLineRunner commandLineRunner(IUserRepository repository) {
+		CommandLineRunner commandLineRunner(IUserRepository repository,IExerciseRepository exerciserep) {
 			return args -> {
 				User usuario1=new User("mes@esa.com","1234");
 				User usuario2=new User("n@a.com","5678");
@@ -26,7 +26,7 @@ public class Userconfiguration {
 				Exercise ejemplo2=new Exercise("salto olimpico", 40);
 				Exercise ejemplo3=new Exercise("sillonball", 90);
 				repository.saveAll(List.of(usuario1,usuario2));
-				
+				exerciserep.saveAll(List.of(ejemplo1,ejemplo2,ejemplo3));
 
 			};
 		

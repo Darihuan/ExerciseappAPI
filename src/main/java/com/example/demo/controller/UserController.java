@@ -35,13 +35,6 @@ public class UserController {
 	public void addUser(@RequestBody User user) {
 		userservice.addUser(user);
 	}
-	@PostMapping(path="/{id}")
-	public void addExercise(@RequestBody Exercise exercise,@PathVariable("id") Long id){
-		userservice.addExercise(exercise,id);
-	}
-	
-	
-	
 	
 
 }

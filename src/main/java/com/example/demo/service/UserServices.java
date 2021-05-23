@@ -37,10 +37,7 @@ public class UserServices {
 		
 	}
 
-	public void addExercise(Exercise exercise, Long id) {
-		userrepository.findById(id).get().setExercises(List.of(exercise));
-		
-	}
+
 	
 	
 	
